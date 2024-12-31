@@ -1,23 +1,39 @@
 "use client";
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
 
+import { TextFade } from "../textUi/fadeUp";
+
+
+
 
 const Hero = () => {
+
     return (
         <div className=" containerr text-white h-screen flex justify-center items-center w-full " id="home">
             <div className=" md:w-[50%] ">
                 <div className=" w-full md:p-10 p-5 relative rounded-2xl border border-[#ffffff6e] backdrop-blur-[1px] md:bg-[#ffffff06]" >
+                    <TextFade
+                     direction="up"
+                       className="pt-0 pb-5 flex-col flex  space-y-0"
+                    >
                     <h2 className=" md:text-xl text-base font-semibold py-2 ">Hi, Glad You&rsquo;re Here! &#x1F31F;</h2>
-                    <h1 className="  md:text-8xl text-6xl font-black">
-                        I&rsquo;m <span className=" text-[#F0BB78]">Savin</span>,
+                    <h1 style={{ fontFamily: 'Transcity' }}  className="  md:text-9xl  text-6xl font-black">
+                        I&rsquo;m <span className=" text-[#F0BB78]">Savin  </span>
                     </h1>
+                  
                     <h1 className=" py-3 md:font-light font-medium md:text-xl text-base text-[#ffffff9c]">
                         a <span className=" font-bold text-white">Full-Stack Developer</span> who crafts pixel-perfect and innovative digital experiences. Every project I build is driven by attention to detail and a touch of creativity.
                         Currently pursuing B.Tech in Computer Science at VIT University, I strive to bring ideas to life in ways that matter.
                     </h1>
+                    
+                   
                     <h3 className=" md:font-normal font-medium md:text-base text-sm text-white">
-                        Scroll down to discover how I blend creativity and precision in my work!
+                       Scroll down to discover how I blend creativity and precision in my work!" 
+                     
                     </h3>
+                    
+
+
                     <div className="flex pt-5">
                         <a
                             className=" text-black md:px-8 md:py-3 py-2 px-5 rounded-2xl cursor-pointer border-0 bg-white shadow-md transition-all duration-500 ease-in-out md:text-[15px] text-base tracking-wider uppercase hover:tracking-widest hover:bg-[#F0BB78] hover:text-white active:tracking-widest active:bg-[#F0BB78] active:text-white active:shadow-none active:translate-y-[10px]"
@@ -28,6 +44,7 @@ const Hero = () => {
                             Get My <span className=" font-bold text-black ">Resume</span>
                         </a>
                     </div>
+                    </TextFade>
                 </div>
                 {/* Fixed height for the parent div */}
                 <div className="w-full pt-16 md:pt-0 h-32 flex justify-center items-center relative">
@@ -60,6 +77,12 @@ const Hero = () => {
                
             </div>
          
+
+
+
+
+
+
         </div>
     );
 };

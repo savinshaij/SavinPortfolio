@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: 'Transcity';
+  /* src: url('/LarozaRegular-1GwA2.otf'); */
+  src: url('/fonts/Rabenk-WyBOO.ttf');
+  
+  font-weight: normal;
+  font-style: normal;
+}
     .containerr {
        
         /* Add your background pattern here */
@@ -20,3 +27,35 @@
         display: none; /* Hide scrollbar */
       }
 
+      .main{
+        height: 100vh;
+      
+        .mask, .body{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #afa18f;
+          font-size: 64px;
+          line-height: 66px;
+          cursor: default;
+          
+          p{
+            width: 1000px;
+            padding:40px;
+          }
+          span{
+            color: #ec4e39;
+          }
+        }
+      
+        .mask{
+          mask-image: url('/mask.svg');
+          mask-repeat: no-repeat;
+          mask-size: 40px;
+          background: #ec4e39;
+          position: absolute;
+          color: black;
+        }
+      }

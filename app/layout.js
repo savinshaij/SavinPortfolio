@@ -1,4 +1,5 @@
 
+
 import "./globals.css";
 
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className="scroll-smooth   max-w-full mt-2 md:px-6 px-3  mx-auto  bg-[#121212] "
  
       >
+       
         {children}
       </body>
     </html>

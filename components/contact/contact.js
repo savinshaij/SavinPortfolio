@@ -2,9 +2,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FiCheckSquare, FiX } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+
+
 import emailjs from "@emailjs/browser";
+import Reveal from "../textUi/Reveal";
+
 
 export default function ContactPage() {
+   
+ 
+
     const [notifications, setNotifications] = useState([]);
 
     const removeNotif = (id) => {
@@ -26,8 +33,9 @@ export default function ContactPage() {
                 setNotifications((pv) => [failNoti(), ...pv]);
             });
     };
+   
 
-
+    
     return (
         <div className="w-full h-full" id="contact">
             {/* Notifications */}
@@ -41,20 +49,40 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            <div className=" md:flex   justify-around ">
+            <motion.div className=" md:flex   justify-around "
+            
+            initial={{
+                opacity: 0,
+             
+                y: 100,
+
+            }}
+
+            whileInView={{
+                opacity: 1,
+               
+                y: 0,
+                transition: {
+                    duration: 1,
+
+                }
+            }}
+            viewport={{ once: false }}>
                 {/* Left Section */}
                 <div className=" py-6 md:w-1/2 w-full h-full md:flex-col justify-center items-center ">
                     <div className=" w-full h-full flex justify-center items-center">
                         <div>
+                          
+                           
                             <div className="w-full  flex justify-center items-center">
-                                <h1 className=" py-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center md:text-8xl text-6xl  font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10" >My Contact</h1>
+                            <Reveal>      <h1 style={{ fontFamily: 'Transcity' }} className=" py-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center md:text-8xl text-6xl  font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10" >My Contact</h1></Reveal> 
                             </div>
                             <div className=" w-full   flex justify-center items-center">
 
                                 <div className=" md:w-2/3  w-full  bg-[#ffffff00]   md:flex flex-col  text-white md:p-6">
 
 
-                                    <h2 className=" text-lg pt-4  text-[#ffffff56] font-light text-center">
+                                    <h2 className=" text-lg  pb-7  text-[#ffffff56] font-light text-center">
                                         Feel free to reach out if you'd like to collaborate, discuss an opportunity, or just say hello.
                                         I am always excited to connect with like-minded individuals and explore new ideas!
                                     </h2>
@@ -73,7 +101,7 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                             </div>
-
+                            
                         </div>
 
                     </div>
@@ -82,7 +110,11 @@ export default function ContactPage() {
                 </div>
                 {/* Right Section */}
                 <div className="md:w-1/2 w-full  md:px-0 md:flex items-center md:justify-start justify-center">
-                    <div className="w-full  max-w-xl bg-[#ffffff17] border border-[#ffffff2d] p-6 py-10  rounded-xl shadow-lg">
+                    <motion.div 
+                  
+                   className="w-full max-w-xl bg-[#ffffff17] border border-[#ffffff2d] p-6 py-10 rounded-xl shadow-lg"
+                 
+                    >
                         <h2 className="md:text-5xl text-4xl w-full font-bold text-[#F0BB78]  md:py-7 py-3 md:px-10 text-center">
                             Send a Message
                         </h2>
@@ -131,9 +163,9 @@ export default function ContactPage() {
                                 <input type="submit" value="Send" className=" z-auto w-full text-black  rounded-xl h-10 bg-white  hover:bg-[#2c2c2c] hover:text-white" />
                             </div>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

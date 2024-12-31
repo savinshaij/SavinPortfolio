@@ -26,7 +26,7 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="flex w-fit rounded-full border-2 border-white backdrop-blur-lg bg-transparent p-1"
+      className="flex w-fit rounded-full font-bold border border-white backdrop-blur-lg bg-transparent p-1"
     >
         <AnchorLink href="#home">
       <Tab setPosition={setPosition}>Home</Tab>
@@ -62,7 +62,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-[#ffffffd2] mix-blend-difference md:px-5 md:py-3 md:text-base"
     >
       {children}
     </li>
