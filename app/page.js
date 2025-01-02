@@ -5,6 +5,7 @@ import ContactPage from "@/components/contact/contact";
 
 import Hero from "@/components/hero/Hero";
 import MyWorks from "@/components/myWorks/myWorks";
+import NavMob from "@/components/navbar/mobNav";
 import { NavBar2 } from "@/components/navbar/NavBar";
 import NewSkills from "@/components/newSkill/Skills";
 import SkillText from "@/components/skilltext/skilltext";
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <div className=" scroll-smooth w-full h-full">
     
-       
+       <NavMob/>
       <NavBar2 />
       <Hero />
       <SkillText />

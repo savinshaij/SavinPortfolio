@@ -15,7 +15,7 @@ const Project2 = () => {
       <h3 className="text-4xl text-orange-500 md:text-6xl font-semibold">
         Restaurent app
       </h3>
-      <p className="text-base md:text-lg text-[#ffffffde] mt-2 md:mt-4">
+      <p className="text-base md:text-lg text-[#ffffff7e] mt-2 md:mt-4">
       ST-Pizza simplifies food ordering with an intuitive interface that lets you browse menus, place orders, and make payments all in one seamless platform. Enjoy a hassle-free dining experience from the comfort of your home with ST-Pizza
       </p>
       <div className=" flex py-6 md:gap-5 gap-2 text-center ">

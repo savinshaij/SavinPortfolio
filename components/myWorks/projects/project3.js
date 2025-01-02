@@ -16,7 +16,7 @@ const Project3 = () => {
         <h3 className="text-4xl text-teal-500 md:text-6xl font-semibold">
           WasteConnect
         </h3>
-        <p className="text-base md:text-lg text-[#ffffffde] mt-2 md:mt-4">
+        <p className="text-base md:text-lg text-[#ffffff7e] mt-2 md:mt-4">
         WasteConnect empowers users to take control of waste management with a comprehensive suite of features designed to promote environmental protection. The platform enables users to report waste disposal issues, register for garbage collection services, and track their service requests all from one intuitive interface.
         </p>
         <div className=" flex py-6 md:gap-5 gap-2 text-center ">

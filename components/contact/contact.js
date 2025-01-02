@@ -75,7 +75,7 @@ export default function ContactPage() {
                           
                            
                             <div className="w-full  flex justify-center items-center">
-                            <Reveal>      <h1 style={{ fontFamily: 'Transcity' }} className=" py-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center md:text-8xl text-6xl  font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10" >My Contact</h1></Reveal> 
+                            <Reveal>      <h1 style={{ fontFamily: 'Transcity' }} className=" py-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b  bg-clip-text text-center md:text-8xl text-6xl  font-semibold leading-none text-transparent from-white to-slate-900/10" >My Contact</h1></Reveal> 
                             </div>
                             <div className=" w-full   flex justify-center items-center">
 
