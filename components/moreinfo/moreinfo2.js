@@ -154,7 +154,7 @@ const AboutBlock = () => (
     <p>
      {" "}
       <span className="text-zinc-400">
-      I build fast and make things that stand out. I always try new, creative ways to solve problems. I learn new tools quickly, and my skills in AI, ML, and software development help me build better, smarter projects.
+      Quick learner who builds fast and creates standout projects. Always exploring new tools, stacks, and ideas, with strong skills in AI, ML, and software development to craft impactful, efficient solutions
       </span>
     </p>
   </Block>
