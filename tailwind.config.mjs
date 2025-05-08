@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         customColor: "#ff5733",
       },
+      maxWidth: {
+        '5xl': '64rem', // ~1024px
+      },
     },
   },
   plugins: [addVariablesForColors],

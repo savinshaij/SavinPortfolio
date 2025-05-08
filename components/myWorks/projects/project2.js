@@ -3,7 +3,7 @@ import Image from "next/image";
 import de from "../../../public/stp.png";
 const Project2 = () => {
   return (
-    <section className="  font-poppins w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-32 max-w-6xl mx-auto">
+    <section className="  font-poppins md:w-4/6 px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-10 max-w-6xl mx-auto">
     <Image src={de} alt="Network is slow to load this pic"
     loading="lazy"
    

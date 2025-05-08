@@ -3,7 +3,7 @@ import Image from "next/image";
 import de from "../../../public/ev.png";
 const Project4 = () => {
     return (
-        <section className="  font-poppins w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-32 max-w-6xl mx-auto">
+        <section className="  font-poppins md:w-4/6 px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-32 max-w-6xl mx-auto">
         <Image src={de} alt="Network is slow to load this pic"
         loading="lazy"
        
@@ -16,7 +16,7 @@ const Project4 = () => {
   Echoverse
 </h3>
 <p className="text-base md:text-lg text-[#ffffff7e] mt-2 md:mt-4">
-  Echoverse uses cutting-edge **AI** and **Natural Language Processing (NLP)** to identify and link Amazon products featured in social media content. Products seamlessly appear below relevant posts, making discovery and shopping effortless and intuitive.
+  Echoverse uses cutting-edge AI and Natural Language Processing to identify and link Amazon products featured in social media content. Products seamlessly appear below relevant posts, making discovery and shopping effortless and intuitive.
 </p>
 
           <div className=" flex py-6 md:gap-5 gap-2 text-center ">

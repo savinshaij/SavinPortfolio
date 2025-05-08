@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'Transcity';
-  /* src: url('/LarozaRegular-1GwA2.otf'); */
-  src: url('/fonts/Rabenk-WyBOO.ttf');
+  src: url('/fonts/Alata-Regular.ttf');
+  /* src: url('/fonts/Rabenk-WyBOO.ttf'); */
 
   font-weight: normal;
   font-style: normal;
@@ -26,6 +26,16 @@
       body::-webkit-scrollbar {
         display: none; /* Hide scrollbar */
       }
+
+      /* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
 
       .main{
         height: 100vh;

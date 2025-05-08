@@ -77,7 +77,7 @@ const Cursor = ({ position }) => {
         width: position.width,
         opacity: position.opacity,
       }}
-      className="absolute z-0 h-7 rounded-full bg-white md:h-12"
+      className="absolute z-0 h-3 rounded-full bg-white md:h-12"
     />
   );
 };

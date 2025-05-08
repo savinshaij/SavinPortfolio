@@ -1,10 +1,7 @@
-
-
 import ContactPage from "@/components/contact/contact";
 
-
 import Hero from "@/components/hero/Hero";
-import FeaturesGrid from "@/components/moreinfo/moreInfo";
+import { RevealBento as FeaturesGrid } from "@/components/moreinfo/moreinfo2"; // Fix: Use named import
 import MyWorks from "@/components/myWorks/myWorks";
 import NavMob from "@/components/navbar/mobNav";
 import { NavBar2 } from "@/components/navbar/NavBar";
@@ -14,19 +11,38 @@ import SocialIcons from "@/components/social/social";
 
 export default function Home() {
   return (
-    <div className=" scroll-smooth w-full  h-full">
-    <h1 className=" fixed  bottom-1 right-1">o</h1>
-
-       <NavMob/>
+    <div
+      className="scroll-smooth w-full h-full "
+     
+    >
+      <NavMob />
       <NavBar2 />
+      <div className=" snap-y snap-mandatory overflow-y-scroll  hide-scrollbar "// i dont want to see that scroll bar hide it
+      style={{ height: "100vh" }}
+      >
+      <section className="snap-start">
       <Hero />
-      <FeaturesGrid/>
-      <SkillText />
-      <NewSkills />
-      <MyWorks />
-      <ContactPage />
+      </section>
+      
+        <section className="snap-start">
+        <FeaturesGrid />
+      </section>
+      </div>
+
+   
+
+      
+        <SkillText />
+        <NewSkills />
+        <MyWorks />
+        <ContactPage />
+      
+
       <div className="flex text-white w-full justify-center my-10 mt-20 items-center">
-        <p className=" font-light md:text-lg text-[#ffffff7e]">Made by Savin | Copyright © {new Date().getFullYear()} - All right reserved </p>
+        <p className="font-light md:text-lg text-[#ffffff7e]">
+          Made by Savin | Copyright © {new Date().getFullYear()} - All right
+          reserved
+        </p>
       </div>
     </div>
   );

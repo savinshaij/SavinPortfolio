@@ -4,80 +4,106 @@ import React from "react"
 import Reveal from "../textUi/Reveal";
 import { LettersPullUp } from "../textUi/lettersUp";
 import { TextFade } from "../textUi/fadeUp";
-import IconCloud from "../cloud/cloudProps";
+import { DivOrigami } from "../other/iconani";
 
 
 
-const slugs = [
-    "typescript",
-    "javascript",
-    "dart",
-    "java",
-    "react",
-    "flutter",
-    "android",
-    "html5",
-    "css3",
-    "nodedotjs",
-    "express",
-    "nextdotjs",
-    "prisma",
-    "amazonaws",
-    "postgresql",
-    "firebase",
-    "nginx",
-    "vercel",
-    "testinglibrary",
-    "jest",
-    "cypress",
-    "docker",
-    "git",
-    "jira",
-    "github",
-    "gitlab",
-    "visualstudiocode",
-    "androidstudio",
-    "sonarqube",
-    "figma",
-];
 
 
 export default function NewSkills() {
-    
+
     return (
 
 
-        <div className="w-full md:h-[100vh]  lg:px-44 flex">
+        <div className="w-full md:h-screen  lg:px-44 flex">
 
 
 
 
-            <div className="w-full   md:h-[100vh] lg:h-[100vh] flex flex-col gap-10 justify-center items-center  " id="skills">
-               <Reveal><h1 style={{ fontFamily: 'Transcity' }} className=" my-10 pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center md:text-8xl text-6xl font-semibold leading-none text-transparent from-[#fff] to-slate-900/10" > My Skills</h1></Reveal> 
+            <div className="w-full   md:h-full lg:h-[100vh] flex flex-col gap-10 justify-center items-center  " id="skills">
+                <Reveal><h1 style={{ fontFamily: 'Transcity' }} className=" my-10 pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center md:text-8xl text-6xl font-semibold leading-none text-transparent from-[#fff] to-slate-900/10" > My Skills</h1></Reveal>
 
-                <div className="  border-white border-0 md:flex  justify-around items-center py-10 px-3 rounded-3xl md:bg-[#ffffff07] " >
-                    <div className="  md:flex hidden  rounded-3xl ">
-                        <IconCloud iconSlugs={slugs} className=" text-center"/>
+                <div className=" w-full flex flex-col md:flex-row items-start gap-6 rounded-3xl border border-zinc-700 bg-zinc-800 md:p-6">
 
-                    </div>
-                    <div className=" md:w-[40%] w-full">
-                        <TextFade
-                        direction="up"
-                       className="pt-0 pb-5 flex-col flex  space-y-0"
-                        >
-                        <h2 className=" text-2xl font-bold text-[#F0BB78]"> <LettersPullUp text="Full-Stack Web Development:"/> </h2>
-                        <p className=" text-[#ffffff7e] pb-4  md:font-medium py-2">I specialize in building web-based platforms, managing both frontend and backend development using modern technologies like Next.js, React, and Tailwind CSS for scalable, responsive applications with seamless API integrations.</p>
-                        
-                        <h2 className=" text-2xl md:font-bold text-[#F0BB78]"> <LettersPullUp text="AI & NLP Expertise:"/> </h2>
+{/* Left Image with border */}
+<div className="w-full md:w-1/2 flex justify-center items-center h-full">
+  {/* <img 
+    src="/skillAvatar.png" 
+    alt="Profile or Illustration" 
+    className="w-full max-w-xs rounded-lg  object-cover"
+  /> */}
+  <DivOrigami/>
+</div>
 
-                        <p className=" text-[#ffffff7e] pb-4 font-medium py-2">I have hands-on experience working on AI and Natural Language Processing (NLP) projects, developing intelligent solutions such as chatbots, sentiment analysis, and language processing tools using advanced algorithms and machine learning frameworks.</p>
-                        <h2 className=" text-2xl font-bold text-[#F0BB78]"> <LettersPullUp text="UI/UX Design:"/> </h2>
-                        
-                        <p className=" text-[#ffffff7e] md:font-medium py-2">I am skilled in crafting user-centered UI/UX designs, ensuring both functionality and aesthetics. By using tools like Figma and Adobe XD, I create intuitive, responsive, and visually appealing interfaces that enhance user experience across devices.</p>
-                        </TextFade>
-                    </div>
+{/* Content on the right */}
+<div className="w-full md:w-2/3">
+  <TextFade direction="up" className="flex-col flex space-y-0">
+    
+    {/* Full-Stack Section */}
+    <div className="max-w-4xl mx-auto p-6 pt-2 pb-2">
+      <h2 className="text-xl md:text:xl font-bold text-white">
+        <LettersPullUp text="Full-Stack Web Development:" />
+      </h2>
+      <div className="grid grid-cols-2 gap-4 md:text-base  font-light text-[#ffffff7e] py-1">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Next.js</li>
+          <li>Tailwind CSS</li>
+          <li>Framer Motion</li>
+          <li>Express.js</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-1">
+          <li>MongoDB</li>
+          <li>React.js</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
 
-                </div>
+    {/* AI/ML/DL Section */}
+    <div className="max-w-4xl mx-auto p-6 pt-0 pb-2">
+      <h2 className="text:xl font-bold text-white">
+        <LettersPullUp text="AI/ML/DL:" />
+      </h2>
+      <div className="grid grid-cols-2 gap-4 md:text-base  font-light text-[#ffffff7e] py-1">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Image Classification</li>
+          <li>YOLO, SSD, R-CNN</li>
+          <li>UNet, DeepLab</li>
+          <li>OpenCV</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-1">
+          <li>TensorFlow & Keras</li>
+          <li>NumPy</li>
+          <li>NLTK</li>
+          <li>Spacy</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Other Section */}
+    <div className="max-w-4xl mx-auto p-6 pt-0 pb-2">
+      <h2 className="text:xl font-bold text-white">
+        <LettersPullUp text="Other:" />
+      </h2>
+      <div className="grid grid-cols-2 gap-4 md:text-base  font-light text-[#ffffff7e] py-1">
+        <ul className="list-disc list-inside space-y-1">
+          <li>Java</li>
+          <li>MS Excel</li>
+          <li>Figma</li>
+          <li>Git/GitHub</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Canva</li>
+          <li>Linux</li>
+          <li>Bash</li>
+          <li>Copilot & other AI tools</li>
+        </ul>
+      </div>
+    </div>
+
+  </TextFade>
+</div>
+</div>
 
             </div>
 

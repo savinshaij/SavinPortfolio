@@ -11,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="scroll-smooth   max-w-full mt-2 md:px-6 px-3  mx-auto  bg-[#121212] "
+       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+      </head>
+      <body className="scroll-smooth   max-w-full mt-2 md:px-6 px-3  mx-auto   bg-zinc-900 "
  
       >
        
