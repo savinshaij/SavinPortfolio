@@ -42,7 +42,7 @@ export default function NewSkills() {
     {/* Full-Stack Section */}
     <div className="max-w-4xl mx-auto p-6 pt-2 pb-2">
       <h2 className="text-xl md:text:xl font-bold text-white">
-        <LettersPullUp text="Full-Stack Web Development:" />
+        <LettersPullUp text="Web Development:"/>
       </h2>
       <div className="grid grid-cols-2 gap-4 md:text-base  font-light text-[#ffffff7e] py-1">
         <ul className="list-disc list-inside space-y-1">

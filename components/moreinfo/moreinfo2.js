@@ -65,18 +65,18 @@ const HeaderBlock = () => (
     Hobbies & Personal Strengths{" "}
       <span className="text-zinc-400">
       
-      <ul className="list-disc pl-0">
+      <ul className="list-disc text-base pl-0">
         <li className="flex items-center">
-          <span className="text-md mr-2">⚪</span> I love researching and exploring new technologies.
+          <span className=" mr-2">⚪</span> I love researching and exploring new technologies.
         </li>
         <li className="flex items-center">
-          <span className="text-md mr-2">⚪</span> Always looking for creative ways to solve problems.
+          <span className=" mr-2">⚪</span> Always looking for creative ways to solve problems.
         </li>
         <li className="flex items-center">
-          <span className="text-md mr-2">⚪</span> Fast self-learner  I pick up new skills quickly.
+          <span className=" mr-2">⚪</span> Fast self-learner  I pick up new skills quickly.
         </li>
         <li className="flex items-center">
-          <span className="text-md mr-2">⚪</span> A solid team player who collaborates well with others.
+          <span className=" mr-2">⚪</span> A solid team player who collaborates well with others.
         </li>
       </ul>
       </span>

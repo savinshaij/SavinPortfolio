@@ -20,7 +20,7 @@ const Hero = () => {
             >
               I&rsquo;m <span className="text-[#F0BB78]">Savin</span>
             </h1>
-            <h1 className=" md:text-lg lg:text-md font-thin col-span-12 text-xl leading-snug text-[#ffffff9c]">
+            <h1 className=" md:text-lg lg:text-md md:font-thin font-light col-span-12 text-xl leading-snug text-[#ffffff9c]">
               I engineer scalable solutions that work silently behind the scenes or dazzle on the frontend. Whether it&rsquo;s untangling spaghetti logic, automating tests for bulletproof apps, or teaching machines to think, I thrive where logic meets creativity.
             </h1>
             <h3 className="text-sm my-4 md:text-sm lg:text-base text-[#ffffff52]">
