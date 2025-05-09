@@ -1,5 +1,5 @@
 "use client";
-import TextRevealByWord from "@/components/text/textRe";
+import TextRevealByWord from "../text/textRe";
 export default function SkillText() {
     return (
       <>

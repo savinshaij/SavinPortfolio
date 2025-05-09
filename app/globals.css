@@ -2,70 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font */
 @font-face {
   font-family: 'Transcity';
   src: url('/fonts/Alata-Regular.ttf');
-  /* src: url('/fonts/Rabenk-WyBOO.ttf'); */
-
   font-weight: normal;
   font-style: normal;
 }
-    .containerr {
-       
-        /* Add your background pattern here */
-        background-color: #31313100;
-        background-image: radial-gradient(rgba(255, 255, 255, 0.048) 1px, transparent 0);
-        background-size: 20px 20px;
-        background-position: -5px -5px
-      }
-  
-      body {
-        overflow-y: scroll; /* Ensure layout remains the same even if the scrollbar is hidden */
-      }
-      
-      body::-webkit-scrollbar {
-        display: none; /* Hide scrollbar */
-      }
 
-      /* Hide scrollbar but allow scrolling */
+/* Background pattern */
+.containerr {
+  background-color: #31313100;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.048) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -5px -5px;
+}
+
+/* Body styling and scrollbar hiding */
+body {
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for webkit browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for all browsers */
 .hide-scrollbar {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;      /* IE and Edge */
 }
-
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;                 /* Chrome, Safari, Opera */
 }
 
-      .main{
-        height: 100vh;
-      
-        .mask, .body{
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #afa18f;
-          font-size: 64px;
-          line-height: 66px;
-          cursor: default;
-          
-          p{
-            width: 1000px;
-            padding:40px;
-          }
-          span{
-            color: #ec4e39;
-          }
-        }
-      
-        .mask{
-          mask-image: url('/mask.svg');
-          mask-repeat: no-repeat;
-          mask-size: 40px;
-          background: #ec4e39;
-          position: absolute;
-          color: black;
-        }
-      }
+/* Full height layout */
+.main {
+  height: 100vh;
+}
+.main .mask,
+.main .body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #afa18f;
+  font-size: 64px;
+  line-height: 66px;
+  cursor: default;
+}
+
+/* Mask styling */
+.main .mask {
+  mask-image: url('/mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  background: #ec4e39;
+  position: absolute;
+  color: black;
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee var(--duration) infinite linear;
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) infinite linear;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}

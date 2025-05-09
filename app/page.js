@@ -1,14 +1,12 @@
-import ContactPage from "@/components/contact/contact";
-
-import Hero from "@/components/hero/Hero";
-import { RevealBento as FeaturesGrid } from "@/components/moreinfo/moreinfo2"; // Fix: Use named import
-import MyWorks from "@/components/myWorks/myWorks";
-import NavMob from "@/components/navbar/mobNav";
-import { NavBar2 } from "@/components/navbar/NavBar";
-import NewSkills from "@/components/newSkill/Skills";
-import SkillText from "@/components/skilltext/skilltext";
-import SocialIcons from "@/components/social/social";
-
+import ContactPage from "../components/contact/contact";
+import Hero from "../components/hero/Hero";
+import { RevealBento as FeaturesGrid } from "../components/moreinfo/moreinfo2"; // Fix: Use named import
+import MyWorks from "../components/myWorks/myWorks";
+import NavMob from "../components/navbar/mobNav";
+import { NavBar2 } from "../components/navbar/NavBar";
+import NewSkills from "../components/newSkill/Skills";
+import SkillText from "../components/skilltext/skilltext";
+import  MarqueeDemo  from "../components/marquee/DemoMarquee";
 export default function Home() {
   return (
     <div
@@ -35,6 +33,7 @@ export default function Home() {
         <SkillText />
         <NewSkills />
         <MyWorks />
+        <MarqueeDemo/>
         <ContactPage />
       
 
