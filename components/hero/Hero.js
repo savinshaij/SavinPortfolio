@@ -1,9 +1,12 @@
 "use client";
-import { FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
+import GetResumrButton from "../Buttons/GetResumeButton";
 import { TextFade } from "../textUi/fadeUp";
 import { BackgroundBeams } from "../backgrounBeams/bkdBeams";
 import Image from "next/image";
 const Hero = () => {
+   const handlePreview = () => {
+    window.open('/Savin-Resume.pdf', '_blank');
+  };
   return (
     <div
    
@@ -27,15 +30,15 @@ const Hero = () => {
               Scroll down to discover how I blend creativity and precision in my work!
             </h3>
             <div className="flex text-center flex-col md:flex-row md:items-center md:justify-between ">
-              <a
+              {/* <a
                 className="hover:text-black px-6 py-3 md:px-8 md:py-2 rounded-xl cursor-pointer border-0 hover:bg-[#F0BB78] shadow-md transition-all duration-500 ease-in-out text-sm  tracking-wider uppercase hover:scale-110 bg-white text-black active:translate-y-1"
                 type="button"
-                href="Resume-Savin.pdf"
-                download="Resume-Savin.pdf"
+                href="Savin-Resume.pdf"
+                download="Savin-Resume.pdf"
               >
                 Get My <span className=" text-black">Resume</span>
-              </a>
-
+              </a> */}
+   <GetResumrButton/>
             </div>
           </TextFade>
           <div className="w-full md:w-3/3 hidden md:flex justify-center items-center p-5">

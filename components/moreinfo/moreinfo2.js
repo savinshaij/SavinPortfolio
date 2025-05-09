@@ -61,11 +61,14 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     
-    <h1 className=" text-2xl md:text-xl font-medium leading-tight">
-    Hobbies & Personal Strengths{" "}
+    <h1 className=" text-2xl  md:text-xl font-medium leading-tight">
+      <span className="  text-2xl font-bold text-zinc-50">
+ Hobbies & Personal Strengths
+      </span>
+   
       <span className="text-zinc-400">
       
-      <ul className="list-disc text-base pl-0">
+      <ul className="list-disc text-base font-light pl-0">
         <li className="flex items-center">
           <span className=" mr-2">⚪</span> I love researching and exploring new technologies.
         </li>
