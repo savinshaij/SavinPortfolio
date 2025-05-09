@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
-import { Marquee } from "./marquee";
+import { Marquee } from "./Marquee";
 import ExampleWrapper from "../model/TestimonialForm"; // Ensure this is exported correctly
 import Reveal from "../textUi/Reveal";
 
