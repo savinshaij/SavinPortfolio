@@ -85,7 +85,7 @@ function MarqueeDemo() {
 
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-zinc-900 to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-zinc-900 to-transparent" />
-      <div className="flex flex-col md:flex-row my-20 mb-40 gap-7 justify-center items-center">
+      <div className="flex flex-col md:flex-row my-20 mb-40 gap-7 text-center justify-center items-center">
         <p className="text-xl px-9 text-zinc-500 font-light">
           If you found my work impressive, feel free to leave a testimonial
         </p>

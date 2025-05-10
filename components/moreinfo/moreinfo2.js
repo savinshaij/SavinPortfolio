@@ -61,14 +61,8 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     
-    <h1 className=" text-2xl  md:text-xl font-medium leading-tight">
-      <span className="  text-2xl font-bold text-zinc-50">
- Hobbies & Personal Strengths
-      </span>
-   
-      <span className="text-zinc-400">
-      
-      <ul className="list-disc text-base font-light pl-0">
+   <h2 className="text-2xl font-bold pb-3  text-zinc-100">Hobbies & Personal Strengths</h2>
+      <ul className="list-disc text-zinc-400 space-y-1 text-base font-light pl-0">
         <li className="flex items-center">
           <span className=" mr-2">⚪</span> I love researching and exploring new technologies.
         </li>
@@ -81,9 +75,15 @@ const HeaderBlock = () => (
         <li className="flex items-center">
           <span className=" mr-2">⚪</span> A solid team player who collaborates well with others.
         </li>
+        <li className="flex items-center">
+          <span className=" mr-2">⚪</span>Enjoy music, movies, drawing, anime, and gaming in my free time.
+        </li>
+        
+
+
       </ul>
-      </span>
-    </h1>
+     
+    
    
   </Block>
 );
@@ -154,12 +154,27 @@ const SocialsBlock = () => (
 
 const AboutBlock = () => (
   <Block className="col-span-12 text-2xl md:text-3xl leading-snug">
-    <p>
-     {" "}
-      <span className="text-zinc-400">
-      Quick learner who builds fast and creates standout projects. Always exploring new tools, stacks, and ideas, with strong skills in AI, ML, and software development to craft impactful, efficient solutions
-      </span>
-    </p>
+   <section className="  px-6 max-w-4xl mx-auto">
+  <h2 className="text-3xl font-bold pb-2  text-zinc-100">Areas of Expertise</h2>
+  <ul className=" space-y-1 text-zinc-500 text-lg font-light list-disc list-inside">
+    <li>
+      Artificial Intelligence & Machine Learning
+    </li>
+    <li>
+      Full-Stack Web Development
+    </li>
+    <li>
+      UI/UX Design
+    </li>
+    <li>
+      Software Development & Testing
+    </li>
+    <li>
+      Excel & Data Handling
+    </li>
+  </ul>
+</section>
+
   </Block>
 );
 

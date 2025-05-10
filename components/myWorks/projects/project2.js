@@ -15,8 +15,8 @@ const Project2 = () => {
       <h3 className="text-4xl text-orange-500 md:text-6xl font-semibold">
         Restaurent app
       </h3>
-      <p className="text-base md:text-lg text-[#ffffff7e] mt-2 md:mt-4">
-      ST-Pizza simplifies food ordering with an intuitive interface that lets you browse menus, place orders, and make payments all in one seamless platform. Enjoy a hassle-free dining experience from the comfort of your home with ST-Pizza
+      <p className="text-base md:text-lg font-light text-zinc-500 mt-2 md:mt-4">
+     ST-Pizza makes food ordering easy with a simple interface to browse menus, place orders, and make payments all in one seamless platform. Enjoy hassle-free dining from home.
       </p>
       <div className=" flex py-6 md:gap-5 gap-2 text-center ">
         <div className=" flex justify-center items-center md:text-sm text-xs border font-poppins rounded-xl border-[#ffffff7c] md:py-2 md:px-3 py-1 px-2 text-[#ffffff60]">Nextjs</div>

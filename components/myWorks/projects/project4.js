@@ -15,8 +15,8 @@ const Project4 = () => {
           <h3 className="text-4xl text-green-500 md:text-6xl font-semibold">
   Echoverse
 </h3>
-<p className="text-base md:text-lg text-[#ffffff7e] mt-2 md:mt-4">
-  Echoverse uses cutting-edge AI and Natural Language Processing to identify and link Amazon products featured in social media content. Products seamlessly appear below relevant posts, making discovery and shopping effortless and intuitive.
+<p className="text-base md:text-lg font-light text-zinc-500 mt-2 md:mt-4">
+ Echoverse uses AI and NLP to identify and link Amazon products in social media content, making product discovery and shopping seamless and intuitive.
 </p>
 
           <div className=" flex py-6 md:gap-5 gap-2 text-center ">

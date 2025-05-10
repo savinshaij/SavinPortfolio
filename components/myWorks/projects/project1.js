@@ -14,7 +14,7 @@ const Project1 = () => {
         <h3 className="text-4xl text-yellow-500 md:text-6xl font-semibold">
           DayEcho
         </h3>
-        <p className="text-base md:text-lg  text-[#ffffff7e] mt-2 md:mt-4">
+        <p className="text-base md:text-lg  font-light text-zinc-500 mt-2 md:mt-4">
         DayEcho revolutionizes social media by blending public sharing with private journaling. With a unique UI, stunning animations, and a focus on user experience, its the platform everyone is talking about
         </p>
         <div className=" flex py-6 md:gap-5 gap-2 text-center ">

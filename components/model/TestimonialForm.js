@@ -89,33 +89,33 @@ const SpringModal = ({ isOpen, setIsOpen, onSubmitSuccess }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="bg-zinc-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
+          className="bg-zinc-900/20 backdrop-blur p-5 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
             initial={{ scale: 0, rotate: "12.5deg" }}
             animate={{ scale: 1, rotate: "0deg" }}
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-gradient-to-br border-gray-500 border bg-zinc-900 text-white p-6 rounded-2xl w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
+            className="bg-gradient-to-br border-gray-500 border bg-zinc-900 text-white p-6 rounded-3xl w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
           >
-            <div className="relative pt-10 z-10">
-              <h3 className="md:text-3xl text-xl font-bold text-center mb-2">Add Testimonial</h3>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-white">
-                    Name
+            <div className="relative  z-10">
+              <h3 className="md:text-3xl text-xl my-5 mb-6 font-bold text-center">Add Testimonial</h3>
+              <form onSubmit={handleSubmit} className="text-left">
+                <div className="mb-4 ">
+                  <label htmlFor="name" className="block text-zinc-400   font-light">
+                    Your Name
                   </label>
                   <input
                     id="name"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full p-2 mt-2 border border-zinc-700 rounded bg-zinc-900 text-white focus:outline-none"
+                    className="w-full p-2 font-light mt-2 border border-zinc-700 se rounded-lg bg-zinc-900 text-white focus:outline-none"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="username" className="block text-white">
+                  <label htmlFor="username" className="block  text-zinc-400   font-light">
                     Your Profession
                   </label>
                   <input
@@ -123,32 +123,32 @@ const SpringModal = ({ isOpen, setIsOpen, onSubmitSuccess }) => {
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full p-2 mt-2 rounded border border-zinc-700 bg-zinc-900 text-white focus:outline-none"
+                    className="w-full p-2 mt-2 font-light rounded-lg border border-zinc-700 bg-zinc-900 text-white focus:outline-none"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="body" className="block text-white">
+                  <label htmlFor="body" className="block  text-zinc-400   font-light">
                     Testimonial
                   </label>
                   <textarea
                     id="body"
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
-                    className="w-full p-2 mt-2 rounded  border border-zinc-700 bg-zinc-900 text-white focus:outline-none"
+                    className="w-full p-2 mt-2 font-light rounded-lg  border border-zinc-700 bg-zinc-900 text-white focus:outline-none"
                     required
                   ></textarea>
                 </div>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded"
+                    className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded-lg"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="bg-white hover:opacity-90 transition-opacity text-black font-semibold w-full py-2 rounded"
+                    className="bg-white hover:opacity-90 transition-opacity text-black font-semibold w-full py-2 rounded-lg"
                   >
                     {loading ? "Submitting..." : submitted ? "Submitted!" : "Submit"}
                   </button>
