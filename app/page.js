@@ -7,6 +7,7 @@ import { NavBar2 } from "../components/navbar/NavBar";
 import NewSkills from "../components/newSkill/Skills";
 import SkillText from "../components/skilltext/skilltext";
 import  MarqueeDemo  from "../components/marquee/DemoMarquee";
+import Testimonial from "../components/marquee/Testimonial"
 export default function Home() {
   return (
     <div
@@ -33,7 +34,7 @@ export default function Home() {
         <SkillText />
         <NewSkills />
         <MyWorks />
-        <MarqueeDemo/>
+        <Testimonial/>
         <ContactPage />
       
 

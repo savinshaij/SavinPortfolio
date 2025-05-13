@@ -1,10 +1,54 @@
 "use client";
 
+import Reveal from "../textUi/Reveal";
 import { useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
-import { Marquee } from "./Marquee";
 import ExampleWrapper from "../model/TestimonialForm"; // Ensure this is exported correctly
-import Reveal from "../textUi/Reveal";
+import { Marquee } from "./Marquee";
+
+const testimonial = () => {
+  const [reviews, setReviews] = useState([]);
+
+  // Fetch testimonials function
+  const fetchTestimonials = async () => {
+    try {
+      const res = await fetch("/api/testimonials");
+      const data = await res.json();
+      if (data.success) {
+        setReviews(data.testimonials);
+      } else {
+        console.error("Failed to fetch testimonials:", data.message);
+      }
+    } catch (err) {
+      console.error("Error fetching testimonials:", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchTestimonials(); // Fetch testimonials on component mount
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center w-full h-full ">
+      <Reveal>
+        <h1
+          style={{ fontFamily: "Transcity" }}
+          className="md:mb-36 mb-10 pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center md:text-8xl text-6xl font-semibold leading-none text-transparent from-[#fff] to-slate-900/10"
+        >
+          Testimonials
+        </h1>
+      </Reveal>
+      <MarqueeSec reviews={reviews} />
+      <div className="flex flex-col md:flex-row my-20 mb-40 gap-7 text-center justify-center items-center">
+        <p className="text-xl px-9 text-zinc-500 font-light">
+          If you found my work impressive, feel free to leave a testimonial
+        </p>
+        {/* Pass fetchTestimonials as a callback to ExampleWrapper */}
+        <ExampleWrapper onSubmitSuccess={fetchTestimonials} />
+      </div>
+    </div>
+  );
+};
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (
@@ -29,40 +73,12 @@ const ReviewCard = ({ img, name, username, body }) => {
   );
 };
 
-function MarqueeDemo({ onAction }) {
-  const [reviews, setReviews] = useState([]);
-  const fetchTestimonials = async () => {
-    try {
-      const res = await fetch("/api/testimonials");
-      const data = await res.json();
-      if (data.success) {
-        setReviews(data.testimonials);
-      } else {
-        console.error("Failed to fetch testimonials:", data.message);
-      }
-    } catch (err) {
-      console.error("Error fetching testimonials:", err);
-    }
-  };
-
-  useEffect(() => {
-    fetchTestimonials();
-  }, []);
-
+function MarqueeSec({ reviews }) {
   const firstRow = reviews.slice(0, reviews.length / 2);
   const secondRow = reviews.slice(reviews.length / 2);
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      {/* <Reveal>
-        <h1
-          style={{ fontFamily: "Transcity" }}
-          className="md:mb-36 mb-10 pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center md:text-8xl text-6xl font-semibold leading-none text-transparent from-[#fff] to-slate-900/10"
-        >
-          Testimonials
-        </h1>
-      </Reveal> */}
-
       {/* Conditionally render reviews or fallback message */}
       {reviews.length > 0 ? (
         <>
@@ -85,9 +101,8 @@ function MarqueeDemo({ onAction }) {
 
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-zinc-900 to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-zinc-900 to-transparent" />
-      
     </div>
   );
 }
 
-export default MarqueeDemo;
+export default testimonial;
